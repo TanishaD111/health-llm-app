@@ -1,6 +1,12 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --button-green: green;
+  --button-gray: gray;
+  --button-blue: blue;
+  --button-orange: orange;
+  --button-white: white;
+  --button-border-radius: 5px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -39,4 +45,112 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+form {
+  text-align: center;
+}
+
+button {
+  padding: 10px 20px;
+  color: var(--button-white);
+  border: none;
+  border-radius: var(--button-border-radius);
+  cursor: pointer;
+}
+
+.symptoms-container {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+button.symptom {
+  background-color: var(--button-gray);
+}
+
+button.symptom.active {
+  background-color: var(--button-green);
+}
+
+.gender-container {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+button.gender {
+  background-color: var(--button-gray);
+}
+
+button.gender.active {
+  background-color: var(--button-blue);
+}
+
+button.submit {
+  background-color: var(--button-orange);
+}
+
+.loading-message {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.error-message {
+  color: red;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.result-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.result-item {
+  margin-bottom: 10px;
+}
+
+.suggestions-table {
+  width: 90%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.suggestions-table th {
+  background-color: #134e4a; /* Dark teal for header */
+  color: white;
+  font-weight: bold;
+  padding: 15px;
+}
+
+.suggestions-group {
+  background-color: #1e848f; /* Default teal background for grouped rows */
+  color: white;
+}
+
+.suggestions-group td {
+  padding: 10px 15px;
+  border: 1px solid #0e7490; /* Teal border */
+}
+
+.suggestions-group:hover {
+  background-color: #0e7490; /* Highlight teal on hover */
+}
+
+.suggestions-title {
+  font-weight: bold;
+  padding: 15px;
+  background-color: #134e4a; /* Darker teal for the group title */
+  color: white;
+  border: 1px solid #0e7490;
 }

@@ -11,12 +11,7 @@
     "start:unix:llamafile": "static/model/TinyLlama-1.1B-Chat-v1.0.F16.llamafile -ngl 9999 --embedding --server --nobrowser --port 8887",
     "setup": "npm-run-all setup:unix:llamafile setup:unix:llamafileexe",
     "setup:unix:llamafile": "curl --no-clobber -L -o TinyLlama-1.1B-Chat-v1.0.F16.llamafile https://huggingface.co/Mozilla/TinyLlama-1.1B-Chat-v1.0-llamafile/resolve/main/TinyLlama-1.1B-Chat-v1.0.Q4_0.llamafile?download=true",
-    "setup:unix:llamafileexe": "chmod +x static/model/TinyLlama-1.1B-Chat-v1.0.F16.llamafile",
-    "start:windows": "npm-run-all --parallel start:windows:*",
-    "start:windows:ui-dev": "nodemon --ignore public/ ./server.js",
-    "start:windows:llamafile": "TinyLlama-1.1B-Chat-v1.0.Q4_0.llamafile.exe -ngl 9999 --embedding --server --nobrowser --port 8887",
-    "setup:windows": "npm-run-all setup:unix:llamafile setup:windows:*",
-    "setup:windows:llamafileexe": "ren TinyLlama-1.1B-Chat-v1.0.Q4_0.llamafile TinyLlama-1.1B-Chat-v1.0.Q4_0.llamafile.exe"
+    "setup:unix:llamafileexe": "chmod +x static/model/TinyLlama-1.1B-Chat-v1.0.F16.llamafile"
   },
   "dependencies": {
     "next": "15.0.3",
